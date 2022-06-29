@@ -83,6 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Center(
         child: ListView(
+          physics: NeverScrollableScrollPhysics(),
           padding: EdgeInsets.only(top: 0),
           children: [
             Container(
@@ -108,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Fluidable(
                         fluid: 1,
-                        minWidth: 100,
+                        minWidth: 200,
                         child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
@@ -177,6 +178,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 0.05,
+              color: Colors.red,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 0.05,
+              color: Colors.red,
             ),
             Container(
               width: MediaQuery.of(context).size.width,
